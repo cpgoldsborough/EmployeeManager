@@ -6,28 +6,31 @@ namespace EmployeeManager
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            double hours;
-            double overtime;
+            String EmployeeName;
+            String EmployeeID;
+            double HoursWorked;
+            double Overtime;
             double HourlyWage = 9.50;
             double AdditionalWage = 14.25;
-            Console.WriteLine("Please enter your hours worked weekly");
-            hours = double.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter your overtime worked hours");
-            overtime = double.Parse(Console.ReadLine());
             double weeklywage;
 
-
-
-            if (overtime > 0) 
+            Console.WriteLine("Please enter your first name and surname");
+            EmployeeName = Console.ReadLine();
+            Console.WriteLine("Please enter your employee ID , this is a singular letter followed by two digits");
+            EmployeeID = Console.ReadLine();
+            Console.WriteLine("Please enter your hours worked weekly");
+            HoursWorked = double.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter your overtime worked hours");
+            Overtime = double.Parse(Console.ReadLine());
+            
+            if (Overtime > 0) 
             {
 
-                weeklywage = hours * HourlyWage + overtime * AdditionalWage;
+                weeklywage = HoursWorked * HourlyWage + Overtime * AdditionalWage;
             }
             else
             {
-                weeklywage = hours * HourlyWage;
+                weeklywage = HoursWorked * HourlyWage;
             }
             Console.WriteLine("Your weekly wage is: " + weeklywage);
         }

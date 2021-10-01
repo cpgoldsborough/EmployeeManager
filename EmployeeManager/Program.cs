@@ -20,8 +20,13 @@ namespace EmployeeManager
             {
             Console.WriteLine("Please enter your first name and surname");
             EmployeeName = Console.ReadLine();
-                if(EmployeeName.Length)
+                if(EmployeeName.Length < 1 || EmployeeName.Length > 50 )
+                {
+                    Console.WriteLine("Incorrect Length");
+                    continue;
+                }
             }
+            Console.WriteLine("Validation Passed");
 
 
 

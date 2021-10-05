@@ -4,21 +4,13 @@ using System.Text;
 
 namespace EmployeeManager
 {
-    class ClassEmployee { 
+    class Employee { 
 
         String EmployeName;
         String EmployeeID;
         int HoursWorked;
-        double HoulyRate = 9.5;
-       override
-        public String toString(String EmployeeName, String EmployeeID)
-        {
-
-        }
-
-       
-        {
-
+        double HourlyRate = 9.5;
+        
         }
     }
-}
+
